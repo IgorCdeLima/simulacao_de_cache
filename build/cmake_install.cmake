@@ -1,8 +1,8 @@
-# Install script for directory: D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS
+# Install script for directory: D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Project")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/consoleApp")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,7 +35,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/install_local_manifest.txt"
+  file(WRITE "D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -51,6 +51,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

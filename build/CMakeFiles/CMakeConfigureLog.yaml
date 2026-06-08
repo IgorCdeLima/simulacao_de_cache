@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Windows - 10.0.19045 - AMD64
   -
@@ -16,7 +16,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -88,13 +88,14 @@ events:
         - "C:\\Users\\igorc\\AppData\\Roaming\\npm"
         - "c:\\Users\\igorc\\.vscode\\extensions\\ms-python.d"
         - "C:\\android\\platform-tools"
+        - "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\Debug"
   -
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler:  
@@ -104,9 +105,9 @@ events:
       The output was:
       0
       Vers├úo do MSBuild 17.11.9+a69bbaaf5 para .NET Framework
-      Compila├º├úo de 08/06/2026 10:55:23 iniciada.
+      Compila├º├úo de 08/06/2026 13:08:12 iniciada.
       
-      Projeto "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\4.3.3\\CompilerIdC\\CompilerIdC.vcxproj" no n├│ 1 (destinos padr├úo).
+      Projeto "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\4.3.3\\CompilerIdC\\CompilerIdC.vcxproj" no n├│ 1 (destinos padr├úo).
       PrepareForBuild:
         Criando o diret├│rio "Debug\\".
         A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
@@ -119,7 +120,7 @@ events:
         CMakeCCompilerId.c
       Link:
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
-        CompilerIdC.vcxproj -> D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\4.3.3\\CompilerIdC\\CompilerIdC.exe
+        CompilerIdC.vcxproj -> D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\4.3.3\\CompilerIdC\\CompilerIdC.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
         :VCEnd
@@ -127,13 +128,13 @@ events:
       FinalizeBuildStatus:
         Excluindo o arquivo "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
         Tocando "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
-      Projeto de compila├º├úo pronto "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\4.3.3\\CompilerIdC\\CompilerIdC.vcxproj" (destinos padr├úo).
+      Projeto de compila├º├úo pronto "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\4.3.3\\CompilerIdC\\CompilerIdC.vcxproj" (destinos padr├úo).
       
       Compila├º├úo com ├¬xito.
           0 Aviso(s)
           0 Erro(s)
       
-      Tempo Decorrido 00:00:00.79
+      Tempo Decorrido 00:00:00.75
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -141,7 +142,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
       
       The C compiler identification is MSVC, found in:
-        D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/4.3.3/CompilerIdC/CompilerIdC.exe
+        D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/4.3.3/CompilerIdC/CompilerIdC.exe
       
   -
     kind: "find-v1"
@@ -150,7 +151,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -196,6 +197,7 @@ events:
       - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
       - "C:/Users/igorc/.vscode/extensions/ms-python.d/"
       - "C:/android/platform-tools/"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.com"
     found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.exe"
@@ -254,6 +256,7 @@ events:
         - "C:\\Users\\igorc\\AppData\\Roaming\\npm"
         - "c:\\Users\\igorc\\.vscode\\extensions\\ms-python.d"
         - "C:\\android\\platform-tools"
+        - "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\Debug"
   -
     kind: "find-v1"
     backtrace:
@@ -261,7 +264,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -307,6 +310,7 @@ events:
       - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
       - "C:/Users/igorc/.vscode/extensions/ms-python.d/"
       - "C:/android/platform-tools/"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/lld-link.com"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/lld-link.exe"
@@ -401,6 +405,9 @@ events:
       - "C:/android/platform-tools/lld-link.com"
       - "C:/android/platform-tools/lld-link.exe"
       - "C:/android/platform-tools/lld-link"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/lld-link.com"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/lld-link.exe"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/lld-link"
     found: false
     search_context:
       ENV{PATH}:
@@ -457,12 +464,13 @@ events:
         - "C:\\Users\\igorc\\AppData\\Roaming\\npm"
         - "c:\\Users\\igorc\\.vscode\\extensions\\ms-python.d"
         - "C:\\android\\platform-tools"
+        - "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\Debug"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -508,6 +516,7 @@ events:
       - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
       - "C:/Users/igorc/.vscode/extensions/ms-python.d/"
       - "C:/android/platform-tools/"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.com"
     found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/link.exe"
@@ -566,12 +575,13 @@ events:
         - "C:\\Users\\igorc\\AppData\\Roaming\\npm"
         - "c:\\Users\\igorc\\.vscode\\extensions\\ms-python.d"
         - "C:\\android\\platform-tools"
+        - "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\Debug"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_MT"
     description: "Path to a program."
@@ -617,6 +627,7 @@ events:
       - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
       - "C:/Users/igorc/.vscode/extensions/ms-python.d/"
       - "C:/android/platform-tools/"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/mt.com"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/mt.exe"
@@ -711,6 +722,9 @@ events:
       - "C:/android/platform-tools/mt.com"
       - "C:/android/platform-tools/mt.exe"
       - "C:/android/platform-tools/mt"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/mt.com"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/mt.exe"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/mt"
     found: false
     search_context:
       ENV{PATH}:
@@ -767,12 +781,13 @@ events:
         - "C:\\Users\\igorc\\AppData\\Roaming\\npm"
         - "c:\\Users\\igorc\\.vscode\\extensions\\ms-python.d"
         - "C:\\android\\platform-tools"
+        - "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\Debug"
   -
     kind: "find-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -818,6 +833,7 @@ events:
       - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
       - "C:/Users/igorc/.vscode/extensions/ms-python.d/"
       - "C:/android/platform-tools/"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/lib.com"
     found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/lib.exe"
@@ -876,6 +892,7 @@ events:
         - "C:\\Users\\igorc\\AppData\\Roaming\\npm"
         - "c:\\Users\\igorc\\.vscode\\extensions\\ms-python.d"
         - "C:\\android\\platform-tools"
+        - "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\Debug"
   -
     kind: "find-v1"
     backtrace:
@@ -884,7 +901,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -956,13 +973,14 @@ events:
         - "C:\\Users\\igorc\\AppData\\Roaming\\npm"
         - "c:\\Users\\igorc\\.vscode\\extensions\\ms-python.d"
         - "C:\\android\\platform-tools"
+        - "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\Debug"
   -
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
@@ -972,9 +990,9 @@ events:
       The output was:
       0
       Vers├úo do MSBuild 17.11.9+a69bbaaf5 para .NET Framework
-      Compila├º├úo de 08/06/2026 10:55:24 iniciada.
+      Compila├º├úo de 08/06/2026 13:08:13 iniciada.
       
-      Projeto "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" no n├│ 1 (destinos padr├úo).
+      Projeto "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" no n├│ 1 (destinos padr├úo).
       PrepareForBuild:
         Criando o diret├│rio "Debug\\".
         A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
@@ -987,7 +1005,7 @@ events:
         CMakeCXXCompilerId.cpp
       Link:
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
@@ -995,13 +1013,13 @@ events:
       FinalizeBuildStatus:
         Excluindo o arquivo "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
         Tocando "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Projeto de compila├º├úo pronto "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (destinos padr├úo).
+      Projeto de compila├º├úo pronto "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\4.3.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (destinos padr├úo).
       
       Compila├º├úo com ├¬xito.
           0 Aviso(s)
           0 Erro(s)
       
-      Tempo Decorrido 00:00:00.63
+      Tempo Decorrido 00:00:00.50
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -1009,7 +1027,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/4.3.3/CompilerIdCXX/CompilerIdCXX.exe
+        D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/4.3.3/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "find-v1"
@@ -1018,7 +1036,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -1064,6 +1082,7 @@ events:
       - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
       - "C:/Users/igorc/.vscode/extensions/ms-python.d/"
       - "C:/android/platform-tools/"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/"
     searched_directories:
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/lld-link.com"
       - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/lld-link.exe"
@@ -1158,6 +1177,9 @@ events:
       - "C:/android/platform-tools/lld-link.com"
       - "C:/android/platform-tools/lld-link.exe"
       - "C:/android/platform-tools/lld-link"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/lld-link.com"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/lld-link.exe"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/lld-link"
     found: false
     search_context:
       ENV{PATH}:
@@ -1214,6 +1236,7 @@ events:
         - "C:\\Users\\igorc\\AppData\\Roaming\\npm"
         - "c:\\Users\\igorc\\.vscode\\extensions\\ms-python.d"
         - "C:\\android\\platform-tools"
+        - "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\Debug"
   -
     kind: "find-v1"
     backtrace:
@@ -1222,7 +1245,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC.cmake:565 (__windows_compiler_msvc_enable_rc)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCInformation.cmake:48 (include)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_RC_COMPILER"
     description: "RC compiler"
@@ -1267,6 +1290,7 @@ events:
       - "C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler/"
       - "C:/Users/igorc/.vscode/extensions/ms-python.d/"
       - "C:/android/platform-tools/"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -1276,9 +1300,9 @@ events:
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/CMake/sbin/"
       - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/Project/bin/"
-      - "C:/Program Files (x86)/Project/sbin/"
-      - "C:/Program Files (x86)/Project/"
+      - "C:/Program Files (x86)/consoleApp/bin/"
+      - "C:/Program Files (x86)/consoleApp/sbin/"
+      - "C:/Program Files (x86)/consoleApp/"
     searched_directories:
       - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.com"
       - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.exe"
@@ -1370,6 +1394,9 @@ events:
       - "C:/android/platform-tools/rc.com"
       - "C:/android/platform-tools/rc.exe"
       - "C:/android/platform-tools/rc"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/rc.com"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/rc.exe"
+      - "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/Debug/rc"
       - "C:/Program Files/bin/rc.com"
       - "C:/Program Files/bin/rc.exe"
       - "C:/Program Files/bin/rc"
@@ -1397,15 +1424,15 @@ events:
       - "C:/Program Files/CMake/rc.com"
       - "C:/Program Files/CMake/rc.exe"
       - "C:/Program Files/CMake/rc"
-      - "C:/Program Files (x86)/Project/bin/rc.com"
-      - "C:/Program Files (x86)/Project/bin/rc.exe"
-      - "C:/Program Files (x86)/Project/bin/rc"
-      - "C:/Program Files (x86)/Project/sbin/rc.com"
-      - "C:/Program Files (x86)/Project/sbin/rc.exe"
-      - "C:/Program Files (x86)/Project/sbin/rc"
-      - "C:/Program Files (x86)/Project/rc.com"
-      - "C:/Program Files (x86)/Project/rc.exe"
-      - "C:/Program Files (x86)/Project/rc"
+      - "C:/Program Files (x86)/consoleApp/bin/rc.com"
+      - "C:/Program Files (x86)/consoleApp/bin/rc.exe"
+      - "C:/Program Files (x86)/consoleApp/bin/rc"
+      - "C:/Program Files (x86)/consoleApp/sbin/rc.com"
+      - "C:/Program Files (x86)/consoleApp/sbin/rc.exe"
+      - "C:/Program Files (x86)/consoleApp/sbin/rc"
+      - "C:/Program Files (x86)/consoleApp/rc.com"
+      - "C:/Program Files (x86)/consoleApp/rc.exe"
+      - "C:/Program Files (x86)/consoleApp/rc"
     found: false
     search_context:
       ENV{PATH}:
@@ -1462,64 +1489,66 @@ events:
         - "C:\\Users\\igorc\\AppData\\Roaming\\npm"
         - "c:\\Users\\igorc\\.vscode\\extensions\\ms-python.d"
         - "C:\\android\\platform-tools"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Project"
+        - "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/consoleApp"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/Project"
+        - "C:/Program Files (x86)/consoleApp"
   -
     kind: "try_compile-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-0rdn3n"
-      binary: "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-0rdn3n"
+      source: "D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-z7x0pi"
+      binary: "D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-z7x0pi"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-0rdn3n'
+        Change Dir: 'D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-z7x0pi'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_dbce0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cc37c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Vers├úo do MSBuild 17.11.9+a69bbaaf5 para .NET Framework
-        Compila├º├úo de 08/06/2026 10:55:25 iniciada.
+        Compila├º├úo de 08/06/2026 13:08:14 iniciada.
         
-        Projeto "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0rdn3n\\cmTC_dbce0.vcxproj" no n├│ 1 (destinos padr├úo).
+        Projeto "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7x0pi\\cmTC_cc37c.vcxproj" no n├│ 1 (destinos padr├úo).
         PrepareForBuild:
           A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
-          Criando o diret├│rio "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0rdn3n\\Debug\\".
-          Criando o diret├│rio "cmTC_dbce0.dir\\Debug\\cmTC_dbce0.tlog\\".
+          Criando o diret├│rio "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7x0pi\\Debug\\".
+          Criando o diret├│rio "cmTC_cc37c.dir\\Debug\\cmTC_cc37c.tlog\\".
         InitializeBuildStatus:
-          Criando "cmTC_dbce0.dir\\Debug\\cmTC_dbce0.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
-          Tocando "cmTC_dbce0.dir\\Debug\\cmTC_dbce0.tlog\\unsuccessfulbuild".
+          Criando "cmTC_cc37c.dir\\Debug\\cmTC_cc37c.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_cc37c.dir\\Debug\\cmTC_cc37c.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_dbce0.dir\\Debug\\\\" /Fd"cmTC_dbce0.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_cc37c.dir\\Debug\\\\" /Fd"cmTC_cc37c.dir\\Debug\\vc143.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Vers├úo 19.41.34120 para x64
           Copyright (C) Microsoft Corporation. Todos os direitos reservados.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_dbce0.dir\\Debug\\\\" /Fd"cmTC_dbce0.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_cc37c.dir\\Debug\\\\" /Fd"cmTC_cc37c.dir\\Debug\\vc143.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0rdn3n\\Debug\\cmTC_dbce0.exe" /INCREMENTAL /ILK:"cmTC_dbce0.dir\\Debug\\cmTC_dbce0.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-0rdn3n/Debug/cmTC_dbce0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-0rdn3n/Debug/cmTC_dbce0.lib" /MACHINE:X64  /machine:x64 cmTC_dbce0.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_dbce0.vcxproj -> D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0rdn3n\\Debug\\cmTC_dbce0.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7x0pi\\Debug\\cmTC_cc37c.exe" /INCREMENTAL /ILK:"cmTC_cc37c.dir\\Debug\\cmTC_cc37c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-z7x0pi/Debug/cmTC_cc37c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-z7x0pi/Debug/cmTC_cc37c.lib" /MACHINE:X64  /machine:x64 cmTC_cc37c.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_cc37c.vcxproj -> D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7x0pi\\Debug\\cmTC_cc37c.exe
         FinalizeBuildStatus:
-          Excluindo o arquivo "cmTC_dbce0.dir\\Debug\\cmTC_dbce0.tlog\\unsuccessfulbuild".
-          Tocando "cmTC_dbce0.dir\\Debug\\cmTC_dbce0.tlog\\cmTC_dbce0.lastbuildstate".
-        Projeto de compila├º├úo pronto "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0rdn3n\\cmTC_dbce0.vcxproj" (destinos padr├úo).
+          Excluindo o arquivo "cmTC_cc37c.dir\\Debug\\cmTC_cc37c.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_cc37c.dir\\Debug\\cmTC_cc37c.tlog\\cmTC_cc37c.lastbuildstate".
+        Projeto de compila├º├úo pronto "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7x0pi\\cmTC_cc37c.vcxproj" (destinos padr├úo).
         
         Compila├º├úo com ├¬xito.
             0 Aviso(s)
             0 Erro(s)
         
-        Tempo Decorrido 00:00:00.43
+        Tempo Decorrido 00:00:00.45
         
       exitCode: 0
   -
@@ -1527,7 +1556,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -1545,7 +1574,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.41.34120.0
@@ -1555,14 +1584,15 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-fiwr0x"
-      binary: "D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-fiwr0x"
+      source: "D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-v69x8f"
+      binary: "D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-v69x8f"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -1570,39 +1600,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-fiwr0x'
+        Change Dir: 'D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-v69x8f'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_38c18.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b9413.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Vers├úo do MSBuild 17.11.9+a69bbaaf5 para .NET Framework
-        Compila├º├úo de 08/06/2026 10:55:26 iniciada.
+        Compila├º├úo de 08/06/2026 13:08:14 iniciada.
         
-        Projeto "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fiwr0x\\cmTC_38c18.vcxproj" no n├│ 1 (destinos padr├úo).
+        Projeto "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v69x8f\\cmTC_b9413.vcxproj" no n├│ 1 (destinos padr├úo).
         PrepareForBuild:
           A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
-          Criando o diret├│rio "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fiwr0x\\Debug\\".
-          Criando o diret├│rio "cmTC_38c18.dir\\Debug\\cmTC_38c18.tlog\\".
+          Criando o diret├│rio "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v69x8f\\Debug\\".
+          Criando o diret├│rio "cmTC_b9413.dir\\Debug\\cmTC_b9413.tlog\\".
         InitializeBuildStatus:
-          Criando "cmTC_38c18.dir\\Debug\\cmTC_38c18.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
-          Tocando "cmTC_38c18.dir\\Debug\\cmTC_38c18.tlog\\unsuccessfulbuild".
+          Criando "cmTC_b9413.dir\\Debug\\cmTC_b9413.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+          Tocando "cmTC_b9413.dir\\Debug\\cmTC_b9413.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_38c18.dir\\Debug\\\\" /Fd"cmTC_38c18.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_b9413.dir\\Debug\\\\" /Fd"cmTC_b9413.dir\\Debug\\vc143.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Vers├úo 19.41.34120 para x64
           Copyright (C) Microsoft Corporation. Todos os direitos reservados.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_38c18.dir\\Debug\\\\" /Fd"cmTC_38c18.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_b9413.dir\\Debug\\\\" /Fd"cmTC_b9413.dir\\Debug\\vc143.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fiwr0x\\Debug\\cmTC_38c18.exe" /INCREMENTAL /ILK:"cmTC_38c18.dir\\Debug\\cmTC_38c18.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-fiwr0x/Debug/cmTC_38c18.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/CMakeScratch/TryCompile-fiwr0x/Debug/cmTC_38c18.lib" /MACHINE:X64  /machine:x64 cmTC_38c18.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_38c18.vcxproj -> D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fiwr0x\\Debug\\cmTC_38c18.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v69x8f\\Debug\\cmTC_b9413.exe" /INCREMENTAL /ILK:"cmTC_b9413.dir\\Debug\\cmTC_b9413.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-v69x8f/Debug/cmTC_b9413.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/06.GITHUB/simualcao_de_cache/simulacao_de_cache/build/CMakeFiles/CMakeScratch/TryCompile-v69x8f/Debug/cmTC_b9413.lib" /MACHINE:X64  /machine:x64 cmTC_b9413.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_b9413.vcxproj -> D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v69x8f\\Debug\\cmTC_b9413.exe
         FinalizeBuildStatus:
-          Excluindo o arquivo "cmTC_38c18.dir\\Debug\\cmTC_38c18.tlog\\unsuccessfulbuild".
-          Tocando "cmTC_38c18.dir\\Debug\\cmTC_38c18.tlog\\cmTC_38c18.lastbuildstate".
-        Projeto de compila├º├úo pronto "D:\\05.PROJETOS\\00.ACESSO_VIA_LINHA_DE_COMANDOS\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fiwr0x\\cmTC_38c18.vcxproj" (destinos padr├úo).
+          Excluindo o arquivo "cmTC_b9413.dir\\Debug\\cmTC_b9413.tlog\\unsuccessfulbuild".
+          Tocando "cmTC_b9413.dir\\Debug\\cmTC_b9413.tlog\\cmTC_b9413.lastbuildstate".
+        Projeto de compila├º├úo pronto "D:\\06.GITHUB\\simualcao_de_cache\\simulacao_de_cache\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v69x8f\\cmTC_b9413.vcxproj" (destinos padr├úo).
         
         Compila├º├úo com ├¬xito.
             0 Aviso(s)
             0 Erro(s)
         
-        Tempo Decorrido 00:00:00.45
+        Tempo Decorrido 00:00:00.49
         
       exitCode: 0
   -
@@ -1610,7 +1640,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -1628,7 +1658,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.41.34120.0

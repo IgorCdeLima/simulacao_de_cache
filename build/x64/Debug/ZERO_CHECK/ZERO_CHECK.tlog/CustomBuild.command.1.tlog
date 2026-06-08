@@ -1,0 +1,10 @@
+^D:\05.PROJETOS\00.ACESSO_VIA_LINHA_DE_COMANDOS\BUILD\CMAKEFILES\A5BEB6C701F097CC8946F470D46F1312\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS -BD:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/consoleApp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,10 @@
+^D:\05.PROJETOS\00.ACESSO_VIA_LINHA_DE_COMANDOS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS -BD:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build --check-stamp-file D:/05.PROJETOS/00.ACESSO_VIA_LINHA_DE_COMANDOS/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

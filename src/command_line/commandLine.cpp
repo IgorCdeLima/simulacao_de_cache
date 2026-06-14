@@ -34,39 +34,7 @@ void commandLine::argumentsForClass(int argc, char *argv[]){
     
     try
     {
-        // variables to receive arguments from command line
-        int entryPolicy  = std::stoi(argv[ENTRY_POLICE]);
-        printf("\n<entry_policy>: %d", entryPolicy);
-        if(entryPolicy != 0 && entryPolicy != 1) error_message(("\nThe value <entry_policy>: "+ std::to_string(entryPolicy)+" not is accepted")); 
-
-        int sizeLine = std::stoi(argv[SIZE_LINE]);
-        printf("\n<size_line>: %d", sizeLine);
-        if(sizeLine < 1  || checkNoPowerOfTwo(sizeLine, NO_POSSIBILITY_OF_NUMBER_ONE) ) error_message(("\nThe value <size_line>: "+std::to_string(sizeLine)+" is not accepted"));
-
-
-        int numberLines = std::stoi(argv[NUMBER_OF_LINES]);
-        printf("\n<number_of_lines>: %d", numberLines);
-        if(numberLines < 1 || checkNoPowerOfTwo(numberLines, NO_POSSIBILITY_OF_NUMBER_ONE)) error_message(("\nThe value <associability>:"+ std::to_string(numberLines)+" not is accepted"));
-
-        int associability = std::stoi(argv[ASSOCIABILITY]);
-        printf("\n<associability>: %d", associability);
-        if (associability <1 || associability > numberLines  ||  checkNoPowerOfTwo(associability, POSSIBILITY_OF_NUMBER_ONE)) error_message(("\nThe value "+std::to_string(associability)+" not is accepted"));
-
-        int accessTimePerHit = std::stoi(argv[ACESS_TIME]);
-        printf("\n<access_time_per_hit>: %d", accessTimePerHit);
-        if ( accessTimePerHit<0) error_message(("\nThe value <access_time_per_hit>: "+std::to_string(accessTimePerHit)+" not is accepted"));
-
-        std::string substitutionPolicy = argv[SUBSTITUTION_POLICY];
-        printf("\n<substituition_policy>:%s", substitutionPolicy.c_str());
-        if (substitutionPolicy != "LRU" && substitutionPolicy != "RANDOM") error_message(("\nThe value <substituition_policy>: "+ substitutionPolicy+" not is LRU or RANDOM" ));
-
-        int timeToReadWrite = std::stoi(argv[TIME_TO_READ_WRITE]);
-        printf("\n<time_to_read_write>: %d", timeToReadWrite);
-        if (timeToReadWrite < 0 || timeToReadWrite == NULL ) error_message(("\nThe value <time_to_read_write>: "+std::to_string(timeToReadWrite)+" not is accepted" ));
-
-
-        // chamada da classe correspondente a memória cache; é preciso desenvolver ela ainda
-        
+        checkArguments(argc, argv);
     }
     catch(const std::exception& e)
     {
@@ -74,20 +42,77 @@ void commandLine::argumentsForClass(int argc, char *argv[]){
     }
 }
 
+// não deveria criar uma função que decidisse a partir de um bool, mas tem resolvido meu problema, então irei mante-la por enquanto 
 bool commandLine::checkNoPowerOfTwo(int number, bool possibility_to_number_one){
-    
+    if (number <= 0) return 0;
     if (possibility_to_number_one){
         if(number == 1) return 0;
     }
-    if(number % 2 == 0) return 0;
-    printf("\n The Value not is Power of two");
-    return 1;
+    if((number & (number - 1)) == 0){
+        return 0;
+    }
+    else{
+        printf("This number %d not is power of two\n", number );
+        return 1;
+    }
 }
+
+// Essa função não deve estar aqui, deve ser criada uma classe melhor para ela
 
 void commandLine::error_message(std::string msg){
 
     throw std::runtime_error(msg);
 } 
+
+// it's function receive the paramns arguments and saves in private class variables
+void commandLine::checkArguments(int argc, char *argv[]){
+    entryPolicy  = std::stoi(argv[ENTRY_POLICE]);
+    if(entryPolicy != 0 && entryPolicy != 1) error_message(("\nThe value <entry_policy>: "+ std::to_string(entryPolicy)+" not is accepted")); 
+
+    sizeLine = std::stoi(argv[SIZE_LINE]);
+    if(sizeLine < 1  || checkNoPowerOfTwo(sizeLine, NO_POSSIBILITY_OF_NUMBER_ONE) ) error_message(("\nThe value <size_line>: "+std::to_string(sizeLine)+" is not accepted"));
+
+
+    numberLines = std::stoi(argv[NUMBER_OF_LINES]);
+    if(numberLines < 1 || checkNoPowerOfTwo(numberLines, NO_POSSIBILITY_OF_NUMBER_ONE)) error_message(("\nThe value <associability>:"+ std::to_string(numberLines)+" not is accepted"));
+
+    associability = std::stoi(argv[ASSOCIABILITY]);
+    if (associability <1 || associability > numberLines  ||  checkNoPowerOfTwo(associability, POSSIBILITY_OF_NUMBER_ONE)) error_message(("\nThe value "+std::to_string(associability)+" not is accepted"));
+
+    accessTimePerHit = std::stoi(argv[ACESS_TIME]);
+    if ( accessTimePerHit<0) error_message(("\nThe value <access_time_per_hit>: "+std::to_string(accessTimePerHit)+" not is accepted"));
+
+    substituitionPolicy = argv[SUBSTITUTION_POLICY];
+    if (substituitionPolicy != "LRU" && substituitionPolicy != "RANDOM") error_message(("\nThe value <substituition_policy>: "+ substituitionPolicy+" not is LRU or RANDOM" ));
+
+    timeToReadWrite = std::stoi(argv[TIME_TO_READ_WRITE]);
+    if (timeToReadWrite < 0 || timeToReadWrite == NULL ) error_message(("\nThe value <time_to_read_write>: "+std::to_string(timeToReadWrite)+" not is accepted" ));
+}
+
+
+/* this functions return private class variables from arguments*/
+int commandLine::getEntryPolicy(){
+    return entryPolicy;
+}
+int commandLine::getSizeLine(){
+    return sizeLine;
+}
+int commandLine::getNumberLines(){
+    return numberLines;
+}
+int commandLine::getAssociability(){
+    return associability;
+}
+int commandLine::getAccessTimePerHit(){
+    return accessTimePerHit;
+}
+std::string commandLine::getSubstituitionPolicy(){
+    return substituitionPolicy;
+}
+int commandLine::getTimeToReadWrite(){
+    return accessTimePerHit;
+}
+
 
 commandLine::~commandLine()
 {

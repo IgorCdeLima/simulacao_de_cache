@@ -7,6 +7,9 @@
     <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\command_line\commandLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\cacheMemoryConfiguration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\CMakeLists.txt" />

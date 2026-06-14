@@ -8,9 +8,11 @@ add_executable(
     simula_cache
     ./src/main.cpp
     ./src/command_line/commandLine.cpp
+    ./src/cache_memory/cacheMemoryConfiguration.cpp
 )
 target_include_directories(
     simula_cache
     PRIVATE
         ./include/command_line
+        ./include/cache_memory
 )

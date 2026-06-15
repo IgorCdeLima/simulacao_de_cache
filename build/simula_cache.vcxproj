@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -112,10 +112,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -142,7 +142,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -169,10 +169,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -199,7 +199,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -226,10 +226,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -256,7 +256,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -282,10 +282,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\command_line;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\cache_memory;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\read_file;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\tools;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\.\include\default_structs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -370,7 +370,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\main.cpp" />
     <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\command_line\commandLine.cpp" />
-    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\cacheMemoryConfiguration.cpp" />
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\CacheMemoryConfiguration.cpp" />
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\CacheMemory.cpp" />
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\read_file\ReadFile.cpp" />
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\tools\Tools.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

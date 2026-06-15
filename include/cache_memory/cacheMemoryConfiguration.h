@@ -1,5 +1,5 @@
-#ifndef CACHEMEMORY_H
-#define CACHEMEMORY_H
+#ifndef CACHEMEMORYCONFIGURATION_H
+#define CACHEMEMORYCONFIGURATION_H
 
     #include <vector>
     #include <string>
@@ -7,34 +7,28 @@
 
     #define SIZEADDRESS 32 //address to bits
 
-    struct LinhaCache{
-        int rotulo;
-        int dirty;
-        int lru;
-    };
-
-    class cacheMemoryConfiguration
+    class CacheMemoryConfiguration
     {
     private:
         
         //class
-        cacheMemoryConfiguration()  = default;
-        cacheMemoryConfiguration(const cacheMemoryConfiguration&) = delete;
-        cacheMemoryConfiguration& operator=(const cacheMemoryConfiguration) = delete;
+        CacheMemoryConfiguration()  = default;
+        CacheMemoryConfiguration(const CacheMemoryConfiguration&) = delete;
+        CacheMemoryConfiguration& operator=(const CacheMemoryConfiguration) = delete;
 
         /*Configuration variables for Addres Fields */
         int numberOfSets;
-        int offSetBits;
+        int offsetBits;
         int setsBits;
         int tagBits;
         int totalSizetoCacheMemory;
         
         void setNumberOfSets(int numberOfLines, int associability );
         void setOffSetBits(int sizeLines );
-        void setSetsBits();
+        void setConjuctsBits();
         void setTagBits();
         void setTotalSizeToCacheMemory();
-        std::string getTotalSizeToCacheMemory();
+        std::string getTotalSizeToCacheMemoryToString();
 
         /*Configuration variables from arguments*/
         int entryPolicy;
@@ -52,23 +46,37 @@
         void setAccessTimePerHit(int accesstimePerHitVar);
         void setSubstituitionPolicy(std::string substituitionPolicyVar);
         void setTimeToReadWrite(int timetoReadWriteVar);
+        void defineAddressFields();
 
 
     public:
         // cacheMemory(/* args */);
 
-        static cacheMemoryConfiguration& getInstance()
+        static CacheMemoryConfiguration& getInstance()
         {
-            static cacheMemoryConfiguration instance;
+            static CacheMemoryConfiguration instance;
             return instance;
         }
-        ~cacheMemoryConfiguration();
+        ~CacheMemoryConfiguration();
 
         // class funtions
-        void defineAddressFields();
+
         void printInformations();
         void defineArgumetnsParamns( int entryPolicy, int sizeLine, int numberLines, int associability, int accessTimePerHit, std::string substituitionPolicy, int timeToReadWrite );
-        
+
+        int getEntryPolicy();
+        int getSizeLine();
+        int getNumberLines();
+        int getAssociability();
+        int getAccessTimePerHit();
+        std::string getSubstituitionPolicy();
+        int getTimeToReadWrite();
+        int getNumberOfSets();
+        int getOffSetBits();
+        int getSetBits();
+        int getTagBits();
+        int getTotalSizeToCacheMemory();
+
     };
 
 

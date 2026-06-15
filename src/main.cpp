@@ -1,12 +1,14 @@
 #include "commandLine.h"
-#include "cacheMemoryConfiguration.h"
+#include "CacheMemoryConfiguration.h"
+#include "CacheMemory.h"
 
 commandLine& lineOfCommandTratament = commandLine::getInstance();
-cacheMemoryConfiguration& memoryCache = cacheMemoryConfiguration::getInstance();
+CacheMemoryConfiguration& config = CacheMemoryConfiguration::getInstance();
+CacheMemory memoryCache;
 
 int main(int argc, char *argv[]){
     lineOfCommandTratament.argumentsForClass(argc, argv);
-    memoryCache.defineArgumetnsParamns(
+    config.defineArgumetnsParamns(
         lineOfCommandTratament.getEntryPolicy(),
         lineOfCommandTratament.getSizeLine(),
         lineOfCommandTratament.getNumberLines(),
@@ -15,7 +17,7 @@ int main(int argc, char *argv[]){
         lineOfCommandTratament.getSubstituitionPolicy(),
         lineOfCommandTratament.getTimeToReadWrite()
     );
-    memoryCache.defineAddressFields();
-    memoryCache.printInformations();
+    config.printInformations();
+    memoryCache.interprectAddress("0020a858 R");
     return 0;
 }

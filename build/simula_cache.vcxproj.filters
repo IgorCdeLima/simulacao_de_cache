@@ -7,7 +7,16 @@
     <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\command_line\commandLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\cacheMemoryConfiguration.cpp">
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\CacheMemoryConfiguration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\CacheMemory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\read_file\ReadFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\tools\Tools.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

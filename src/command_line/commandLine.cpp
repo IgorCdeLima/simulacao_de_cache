@@ -66,12 +66,13 @@ void commandLine::error_message(std::string msg){
 
 // it's function receive the paramns arguments and saves in private class variables
 void commandLine::checkArguments(int argc, char *argv[]){
+    /*std::stoi() convert to int value */
+
     entryPolicy  = std::stoi(argv[ENTRY_POLICE]);
     if(entryPolicy != 0 && entryPolicy != 1) error_message(("\nThe value <entry_policy>: "+ std::to_string(entryPolicy)+" not is accepted")); 
 
     sizeLine = std::stoi(argv[SIZE_LINE]);
     if(sizeLine < 1  || checkNoPowerOfTwo(sizeLine, NO_POSSIBILITY_OF_NUMBER_ONE) ) error_message(("\nThe value <size_line>: "+std::to_string(sizeLine)+" is not accepted"));
-
 
     numberLines = std::stoi(argv[NUMBER_OF_LINES]);
     if(numberLines < 1 || checkNoPowerOfTwo(numberLines, NO_POSSIBILITY_OF_NUMBER_ONE)) error_message(("\nThe value <associability>:"+ std::to_string(numberLines)+" not is accepted"));

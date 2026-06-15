@@ -1,4 +1,4 @@
-#include "cacheMemoryConfiguration.h"
+#include "CacheMemoryConfiguration.h"
 
 #define BASEPOWER 2
 #define POWER 10
@@ -7,19 +7,19 @@
 // {
 // }
 
-cacheMemoryConfiguration::~cacheMemoryConfiguration(){}
+CacheMemoryConfiguration::~CacheMemoryConfiguration(){}
 
-void cacheMemoryConfiguration::setNumberOfSets(int numberOfLines, int associability)
+void CacheMemoryConfiguration::setNumberOfSets(int numberOfLines, int associability)
 {
     numberOfSets = numberOfLines / associability ;
 }
 
-void cacheMemoryConfiguration::setOffSetBits(int sizeLine)
+void CacheMemoryConfiguration::setOffSetBits(int sizeLine)
 {
-    offSetBits = log2(sizeLine);
+    offsetBits = log2(sizeLine);
 }
 
-void cacheMemoryConfiguration::setSetsBits()
+void CacheMemoryConfiguration::setConjuctsBits()
 {
     if(!numberOfSets){
         printf("Error: No have number of Sets");
@@ -30,44 +30,44 @@ void cacheMemoryConfiguration::setSetsBits()
     setsBits = log2(numberOfSets);
 }
 
-void cacheMemoryConfiguration::setTagBits(){
+void CacheMemoryConfiguration::setTagBits(){
     
     if(!setsBits) {
         printf("Error: no have setBits");
         return;
     }
-    if(!offSetBits){
+    if(!offsetBits){
         printf("Error: no have offSetBits");
         return;
     }
 
-    tagBits = SIZEADDRESS - setsBits - offSetBits;
+    tagBits = SIZEADDRESS - setsBits - offsetBits;
 }
 
 
-void cacheMemoryConfiguration::setEntryPolicy(int entryPolicyVar){
+void CacheMemoryConfiguration::setEntryPolicy(int entryPolicyVar){
     entryPolicy = entryPolicyVar;
 }
-void cacheMemoryConfiguration::setSizeLine(int sizeLineVar){
+void CacheMemoryConfiguration::setSizeLine(int sizeLineVar){
     sizeLine = sizeLineVar;
 }
-void cacheMemoryConfiguration::setNumberLines(int numberLinesVar){
+void CacheMemoryConfiguration::setNumberLines(int numberLinesVar){
     numberLines = numberLinesVar;
 }
-void cacheMemoryConfiguration::setAssociability(int associabilityVar){
+void CacheMemoryConfiguration::setAssociability(int associabilityVar){
     associability = associabilityVar;
 }
-void cacheMemoryConfiguration::setAccessTimePerHit(int accessTimePerHitVar){
+void CacheMemoryConfiguration::setAccessTimePerHit(int accessTimePerHitVar){
     accessTimePerHit = accessTimePerHitVar;
 }
-void cacheMemoryConfiguration::setSubstituitionPolicy(std::string substituitionPolicyVar){
+void CacheMemoryConfiguration::setSubstituitionPolicy(std::string substituitionPolicyVar){
     substituitionPolicy = substituitionPolicyVar;
 }
-void cacheMemoryConfiguration::setTimeToReadWrite(int timeToReadWriteVar){
+void CacheMemoryConfiguration::setTimeToReadWrite(int timeToReadWriteVar){
     timeToReadWrite = timeToReadWriteVar;
 }
 
-void cacheMemoryConfiguration::setTotalSizeToCacheMemory()
+void CacheMemoryConfiguration::setTotalSizeToCacheMemory()
 {
     if (!numberLines) return;
     if (!sizeLine) return;
@@ -78,7 +78,7 @@ void cacheMemoryConfiguration::setTotalSizeToCacheMemory()
     totalSizetoCacheMemory = pow(BASEPOWER,powerToMemoryCache) / (pow(BASEPOWER, powerSize));
 }
 
-std::string cacheMemoryConfiguration::getTotalSizeToCacheMemory(){
+std::string CacheMemoryConfiguration::getTotalSizeToCacheMemoryToString(){
     if (!numberLines) return "Error:<numberLines> not exist";
     if (!sizeLine) return "Error: <sizeLine> not exist";
 
@@ -103,7 +103,7 @@ std::string cacheMemoryConfiguration::getTotalSizeToCacheMemory(){
     }
 }
 
-void cacheMemoryConfiguration::defineAddressFields()
+void CacheMemoryConfiguration::defineAddressFields()
 {
     if(!numberLines){
         printf("Error: No have Number of Lines");
@@ -120,12 +120,12 @@ void cacheMemoryConfiguration::defineAddressFields()
 
     setNumberOfSets(numberLines, associability);
     setOffSetBits(sizeLine);
-    setSetsBits();
+    setConjuctsBits();
     setTagBits();
     setTotalSizeToCacheMemory();
 }
 
-void cacheMemoryConfiguration::defineArgumetnsParamns(
+void CacheMemoryConfiguration::defineArgumetnsParamns(
     int entryPolicy,
     int sizeLine, 
     int numberLines,
@@ -141,10 +141,11 @@ void cacheMemoryConfiguration::defineArgumetnsParamns(
     setAccessTimePerHit(accessTimePerHit);
     setSubstituitionPolicy(substituitionPolicy);
     setTimeToReadWrite(timeToReadWrite);
+    defineAddressFields();
 }
 
 
-void cacheMemoryConfiguration::printInformations()
+void CacheMemoryConfiguration::printInformations()
 {
     printf("\n<entry_policy>: %d", entryPolicy);
     printf("\n<size_line>: %d", sizeLine);
@@ -155,7 +156,58 @@ void cacheMemoryConfiguration::printInformations()
     printf("\n<time_to_read_write>: %d", timeToReadWrite);
     printf("\n");
     for(int i = 0; i <51; i++){printf("-");}
-    printf("\n[1] Number of Sets (quantidade de conjuntos): %d\n[2] Set offSet Bits (Bits da palavra): %d\n[3] Set bits (bits do conjunto): %d\n[4] Tag bits (Bits da Tag): %d\n[5] Total Size to Cache Memory: %s\n", numberOfSets, offSetBits, setsBits, tagBits, (getTotalSizeToCacheMemory()).c_str());
+    printf("\n[1] Number of Sets (quantidade de conjuntos): %d\n[2] Set offSet Bits (Bits da palavra): %d\n[3] Set bits (bits do conjunto): %d\n[4] Tag bits (Bits da Tag): %d\n[5] Total Size to Cache Memory: %s\n", numberOfSets, offsetBits, setsBits, tagBits, (getTotalSizeToCacheMemoryToString()).c_str());
 
 
+}
+
+
+
+int CacheMemoryConfiguration:: getEntryPolicy()
+{
+    return entryPolicy;
+}
+int CacheMemoryConfiguration::getSizeLine()
+{
+    return sizeLine;
+}
+int CacheMemoryConfiguration:: getNumberLines()
+{
+    return numberLines;
+}
+int CacheMemoryConfiguration:: getAssociability()
+{
+    return associability;
+}
+int CacheMemoryConfiguration:: getAccessTimePerHit()
+{
+    return accessTimePerHit;
+}
+std::string CacheMemoryConfiguration:: getSubstituitionPolicy()
+{
+    return substituitionPolicy;
+}
+int CacheMemoryConfiguration::getTimeToReadWrite()
+{
+    return timeToReadWrite;
+}
+int CacheMemoryConfiguration:: getNumberOfSets()
+{
+    return numberOfSets;
+}
+int CacheMemoryConfiguration:: getOffSetBits()
+{
+    return offsetBits;
+}
+int CacheMemoryConfiguration:: getTagBits()
+{
+    return tagBits;
+}
+int CacheMemoryConfiguration:: getTotalSizeToCacheMemory()
+{
+    return totalSizetoCacheMemory;
+}
+int CacheMemoryConfiguration::getSetBits()
+{
+    return setsBits;
 }

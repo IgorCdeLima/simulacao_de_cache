@@ -2,6 +2,7 @@
 #define STRUCTS_H
 
     #include <string>
+    #include <cstdint>
 
     struct InfoAddress{
         uint32_t tag;

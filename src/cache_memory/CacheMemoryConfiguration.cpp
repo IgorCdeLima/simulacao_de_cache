@@ -1,4 +1,5 @@
 #include "CacheMemoryConfiguration.h"
+#include <cmath>
 
 #define BASEPOWER 2
 #define POWER 10

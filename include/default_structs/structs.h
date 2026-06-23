@@ -21,5 +21,11 @@
         InfoAddress address;
     };
 
+    struct LineInArquive
+    {
+        char operation;
+        uint32_t address;
+    };
+
 
 #endif //STRUCTS_H

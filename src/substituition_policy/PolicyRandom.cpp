@@ -11,5 +11,5 @@ PolicyRandom::~PolicyRandom()
 
 int PolicyRandom::getLineToReplace(const std::vector<LinhaCache> &set)
 {
-    return rand() % set.size();
+    return (rand() % set.size());
 }

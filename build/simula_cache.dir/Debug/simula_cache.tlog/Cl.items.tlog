@@ -2,5 +2,9 @@ D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\main.cpp;D:\06.GITHUB\sim
 D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\command_line\commandLine.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\commandLine.obj
 D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\CacheMemoryConfiguration.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\CacheMemoryConfiguration.obj
 D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\CacheMemory.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\CacheMemory.obj
-D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\read_file\ReadFile.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\ReadFile.obj
+D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\reader_arquive\ReaderArquive.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\ReaderArquive.obj
 D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\tools\Tools.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\Tools.obj
+D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\substituition_policy\PolicyLRU.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\PolicyLRU.obj
+D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\substituition_policy\PolicyRandom.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\PolicyRandom.obj
+D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\write_policy\WriteBack.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\WriteBack.obj
+D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\write_policy\WriteThrough.cpp;D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\build\simula_cache.dir\Debug\WriteThrough.obj

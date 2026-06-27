@@ -46,7 +46,7 @@ void Tools::printInformation(std::string mensagem, std::string variable)
     std::cout 
         << mensagem
         << variable
-        << "\n";
+        << std::endl;
 }
 
 void Tools::printHexString(std::string mensagem, uint32_t variable)

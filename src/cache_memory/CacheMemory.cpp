@@ -112,6 +112,7 @@ void CacheMemory::Controller(LineInArquive lineToInterpret)
         newAddress.operation
     );
 
+    tools.printInformation("\n TAG:", std::to_string(newAddress.address.tag));
 
     if(hitResult.hit)
     {
@@ -138,8 +139,10 @@ void CacheMemory::Controller(LineInArquive lineToInterpret)
             insertLine( chooseLine, newAddress.address.set, newData);
         }
         else{
+            tools.printInformation("\t ESCRITA", " ");
             if(config.allocateOnWriteMiss())
             {
+                tools.printInformation("NA CACHE", "");
                 config.memoryRead++;
                 int chooseLine = config.chooseLineToSubstitution(cacheMemory[newAddress.address.set]);
                 config.processWrite(newData);
@@ -147,6 +150,7 @@ void CacheMemory::Controller(LineInArquive lineToInterpret)
             }
             else
             {
+                tools.printInformation("NA MP", "");
                 config.memoryWrite++;
             }
         }

@@ -50,11 +50,11 @@ void CacheMemoryConfiguration::setEntryPolicy(int entryPolicyVar){
     entryPolicy = entryPolicyVar;
     if(entryPolicy == 1)
     {
-       writePolicy = std::make_unique<WriteThrough>();
+        writePolicy = std::make_unique<WriteBack>();
     }
     else if(entryPolicy == 0)
     {
-        writePolicy = std::make_unique<WriteBack>();
+        writePolicy = std::make_unique<WriteThrough>();
     }
 }
 void CacheMemoryConfiguration::setSizeLine(int sizeLineVar){

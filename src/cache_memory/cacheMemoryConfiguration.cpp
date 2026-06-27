@@ -1,4 +1,5 @@
 #include "CacheMemoryConfiguration.h"
+#include <cmath>
 
 #define BASEPOWER 2
 #define POWER 10
@@ -47,6 +48,14 @@ void CacheMemoryConfiguration::setTagBits(){
 
 void CacheMemoryConfiguration::setEntryPolicy(int entryPolicyVar){
     entryPolicy = entryPolicyVar;
+    if(entryPolicy == 1)
+    {
+       writePolicy = std::make_unique<WriteThrough>();
+    }
+    else if(entryPolicy == 0)
+    {
+        writePolicy = std::make_unique<WriteBack>();
+    }
 }
 void CacheMemoryConfiguration::setSizeLine(int sizeLineVar){
     sizeLine = sizeLineVar;
@@ -61,7 +70,16 @@ void CacheMemoryConfiguration::setAccessTimePerHit(int accessTimePerHitVar){
     accessTimePerHit = accessTimePerHitVar;
 }
 void CacheMemoryConfiguration::setSubstituitionPolicy(std::string substituitionPolicyVar){
-    substituitionPolicy = substituitionPolicyVar;
+    substituitionPolicyString = substituitionPolicyVar;
+    if(substituitionPolicyString == "LRU")
+    {
+        substituitionPolicy = std::make_unique<PolicyLRU>();
+    }
+    else if (substituitionPolicyString == "RANDOM")
+    {
+        substituitionPolicy = std::make_unique<PolicyRandom>();
+    }
+
 }
 void CacheMemoryConfiguration::setTimeToReadWrite(int timeToReadWriteVar){
     timeToReadWrite = timeToReadWriteVar;
@@ -126,21 +144,16 @@ void CacheMemoryConfiguration::defineAddressFields()
 }
 
 void CacheMemoryConfiguration::defineArgumetnsParamns(
-    int entryPolicy,
-    int sizeLine, 
-    int numberLines,
-    int associability,
-    int accessTimePerHit,
-    std::string substituitionPolicy,
-    int timeToReadWrite)
+DataCM config
+)
 {
-    setEntryPolicy(entryPolicy);
-    setSizeLine(sizeLine);
-    setNumberLines(numberLines);
-    setAssociability(associability);
-    setAccessTimePerHit(accessTimePerHit);
-    setSubstituitionPolicy(substituitionPolicy);
-    setTimeToReadWrite(timeToReadWrite);
+    setEntryPolicy(config.entryPolicy);
+    setSizeLine(config.sizeLine);
+    setNumberLines(config.numberLines);
+    setAssociability(config.associability);
+    setAccessTimePerHit(config.accessTimePerHit);
+    setSubstituitionPolicy(config.substituitionPolicy);
+    setTimeToReadWrite(config.timeToReadWrite);
     defineAddressFields();
 }
 
@@ -152,7 +165,7 @@ void CacheMemoryConfiguration::printInformations()
     printf("\n<number_of_lines>: %d", numberLines);
     printf("\n<associability>: %d", associability);
     printf("\n<access_time_per_hit>: %d", accessTimePerHit);
-    printf("\n<substituition_policy>:%s", substituitionPolicy.c_str());
+    printf("\n<substituition_policy>:%s", substituitionPolicyString.c_str());
     printf("\n<time_to_read_write>: %d", timeToReadWrite);
     printf("\n");
     for(int i = 0; i <51; i++){printf("-");}
@@ -185,7 +198,7 @@ int CacheMemoryConfiguration:: getAccessTimePerHit()
 }
 std::string CacheMemoryConfiguration:: getSubstituitionPolicy()
 {
-    return substituitionPolicy;
+    return substituitionPolicyString;
 }
 int CacheMemoryConfiguration::getTimeToReadWrite()
 {
@@ -211,3 +224,34 @@ int CacheMemoryConfiguration::getSetBits()
 {
     return setsBits;
 }
+
+int CacheMemoryConfiguration::chooseLineToSubstitution(std::vector<LinhaCache> &line)
+{
+    return substituitionPolicy->getLineToReplace(line);
+}
+void CacheMemoryConfiguration::processWrite(LinhaCache &line)
+{
+    writePolicy->processWrite(line);
+}
+bool CacheMemoryConfiguration::allocateOnWriteMiss()
+{
+    return writePolicy->allocateOnWriteMiss();
+}
+
+simulationCache CacheMemoryConfiguration::getStatistics()
+{
+    simulationCache result;
+    result.numberOfBlocks = getNumberOfSets();
+    result.hitRate = ((double)cacheHit /(cacheHit + cacheMiss)) * 100.0;
+    double missRate = (double)cacheMiss / (cacheHit + cacheMiss);
+    result.averageAccessTime = accessTimePerHit + (missRate * timeToReadWrite);
+    result.memoryRead = memoryRead;
+    result.memoryWrite = memoryWrite;
+
+    result.sizeBlock = sizeLine;
+    result.writePolicy = (entryPolicy == 1) ? "Write-back" : "Write-through"; 
+    result.substituitionPolicy = substituitionPolicyString;
+    result.associability = associability;
+    
+    return result;
+}   

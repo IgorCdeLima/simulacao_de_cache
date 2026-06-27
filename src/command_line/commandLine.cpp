@@ -87,7 +87,7 @@ void commandLine::checkArguments(int argc, char *argv[]){
     if (substituitionPolicy != "LRU" && substituitionPolicy != "RANDOM") error_message(("\nThe value <substituition_policy>: "+ substituitionPolicy+" not is LRU or RANDOM" ));
 
     timeToReadWrite = std::stoi(argv[TIME_TO_READ_WRITE]);
-    if (timeToReadWrite < 0 || timeToReadWrite == NULL ) error_message(("\nThe value <time_to_read_write>: "+std::to_string(timeToReadWrite)+" not is accepted" ));
+    if (timeToReadWrite < 0 ) error_message(("\nThe value <time_to_read_write>: "+std::to_string(timeToReadWrite)+" not is accepted" ));
 }
 
 

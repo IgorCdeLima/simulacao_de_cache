@@ -1,5 +1,9 @@
 #include "Tools.h"
 
+#define ADDRESS 0
+#define OPERATION 1
+#define CHARACTERTOOPREATION 0
+
 
 Tools::Tools(/* args */)
 {
@@ -9,7 +13,7 @@ Tools::~Tools()
 {
 }
 
-std::vector<std::string> Tools::split(const std::string& texto)
+LineInArquive Tools::split(const std::string& texto)
 {
     std::stringstream ss(texto);
     std::string token;
@@ -19,7 +23,12 @@ std::vector<std::string> Tools::split(const std::string& texto)
     {
         resultado.push_back(token);
     }
-    return resultado;
+
+    LineInArquive AddressAndOperation;
+    AddressAndOperation.address = addressToLine(resultado[ADDRESS]);
+    AddressAndOperation.operation = resultado[OPERATION][CHARACTERTOOPREATION];
+
+    return AddressAndOperation ;
 }
 
 uint32_t Tools::addressToLine(std::string data)
@@ -72,19 +81,29 @@ uint32_t Tools::tagBitsInterpretation(uint32_t address, int offsetBits, int setB
     return mask;
 }
 
+void Tools::cabecalho()
+{
+    std::cout<< "\n\n";
+    std::cout
+    << "Atualização: 23/06/2026"
+    << std::endl;
+
+    std::cout<< "\n\n";
+
+    std::cout
+    << "OPERATION"
+    << "\t\t"
+    << "TAG"
+    << "\t\t\t"
+    << "SET"
+    << "\t\t"
+    << "OFFSET"
+    <<"\n";
+
+}
 
 void Tools::imprimir(MemoryAccess data,  int tagBits, int setBits, int offsetBits)
 {
-    std::cout
-        << "OPERATION"
-        << "\t\t"
-        << "TAG"
-        << "\t\t"
-        << "SET"
-        << "\t\t"
-        << "OFFSET"
-        <<"\n";
-
 
     std::cout
     << data.operation
@@ -95,6 +114,8 @@ void Tools::imprimir(MemoryAccess data,  int tagBits, int setBits, int offsetBit
     << "\t"
     << toBinary(data.address.offset, offsetBits)
     << "\n";
+
+
 }
 
 std::string Tools::toBinary(uint32_t value, int numberBits)
@@ -102,4 +123,39 @@ std::string Tools::toBinary(uint32_t value, int numberBits)
     return std::bitset<32>(value)
         .to_string()
         .substr(32 - numberBits);
+}
+
+void Tools::printTable(simulationCache data)
+{
+    std::cout
+    << "\n\tTABELA 1 - Parâmetros  da Simulação\n"
+    << "\n\tParâmetro \t\t\tValor"
+    << "\n\tTamanho do bloco: \t\t" 
+    << data.sizeBlock
+    << " bytes"
+    << "\n\tPolítica de Escrita: \t\t"
+    << data.writePolicy
+    << "\n\tAlgorítimo de Substituição: \t"
+    << data.substituitionPolicy
+    << "\n\tAssociatividade: \t\t"
+    << data.associability
+    << " blocos"
+    << std::endl;
+
+
+    std::cout
+    << "\n\tTABELA 2 - Resultado da Simulação"
+    << "\n\tNúmero de Blocos: \t\t"
+    << data.sizeBlock
+    << "\n\tTaxa de Acerto: \t\t"
+    << data.hitRate
+    << "%"
+    << "\n\tTempo médio de Acesso (ns): \t"
+    << data.averageAccessTime
+    << "\n\tLeituras na MP: \t\t"
+    << data.memoryRead
+    << "\n\tEscritas na MP: \t\t"
+    << data.memoryWrite
+    << std::endl;
+
 }

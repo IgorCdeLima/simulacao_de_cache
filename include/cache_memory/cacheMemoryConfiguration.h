@@ -3,17 +3,29 @@
 
     #include <vector>
     #include <string>
+    #include "structs.h"
+    #include <memory>
+    #include "IReplacementPolicy.h"
+    #include "PolicyLRU.h"
+    #include "PolicyRandom.h"
+    #include "WriteThrough.h"
+    #include "WriteBack.h"
+    #include "IWritePolicy.h"
 
-
+    
     #define SIZEADDRESS 32 //address to bits
 
     class CacheMemoryConfiguration
     {
     private:
         
+
+
         //class
         CacheMemoryConfiguration()  = default;
+        
         CacheMemoryConfiguration(const CacheMemoryConfiguration&) = delete;
+
         CacheMemoryConfiguration& operator=(const CacheMemoryConfiguration) = delete;
 
         /*Configuration variables for Addres Fields */
@@ -36,7 +48,7 @@
         int numberLines;
         int associability;
         int accessTimePerHit;
-        std::string substituitionPolicy;
+        std::string substituitionPolicyString;
         int timeToReadWrite;
         
         void setEntryPolicy(int entryPolicyVar);
@@ -49,21 +61,25 @@
         void defineAddressFields();
 
 
-    public:
+        std::unique_ptr<IReplacementPolicy> substituitionPolicy;
+        std::unique_ptr<IWritePolicy> writePolicy;
+        
+        
+        public:
         // cacheMemory(/* args */);
-
+        
         static CacheMemoryConfiguration& getInstance()
         {
             static CacheMemoryConfiguration instance;
             return instance;
         }
         ~CacheMemoryConfiguration();
-
+        
         // class funtions
-
+        
         void printInformations();
-        void defineArgumetnsParamns( int entryPolicy, int sizeLine, int numberLines, int associability, int accessTimePerHit, std::string substituitionPolicy, int timeToReadWrite );
-
+        void defineArgumetnsParamns( DataCM configurationStruct);
+        
         int getEntryPolicy();
         int getSizeLine();
         int getNumberLines();
@@ -76,8 +92,25 @@
         int getSetBits();
         int getTagBits();
         int getTotalSizeToCacheMemory();
+        int chooseLineToSubstitution(std::vector<LinhaCache>& line);
+        void processWrite(LinhaCache& line);
+        bool allocateOnWriteMiss();
+        
 
+        //preparar uma struct futuramente
+        int cacheHit = 0;
+        int cacheMiss = 0;
+
+        int memoryRead = 0;
+        int memoryWrite = 0;
+
+        int readHit = 0;
+        int writeHit = 0;
+
+        int globalLRU = 0;
+
+        simulationCache getStatistics();
     };
-
+    
 
 #endif //CACHEMEMORY_H

@@ -10,15 +10,23 @@ add_executable(
     ./src/command_line/commandLine.cpp
     ./src/cache_memory/CacheMemoryConfiguration.cpp
     ./src/cache_memory/CacheMemory.cpp
-    ./src/read_file/ReadFile.cpp
+    ./src/reader_arquive/ReaderArquive.cpp
     ./src/tools/Tools.cpp
+    ./src/substituition_policy/PolicyLRU.cpp
+    ./src/substituition_policy/PolicyRandom.cpp
+    ./src/write_policy/WriteBack.cpp
+    ./src/write_policy/WriteThrough.cpp
 )
+
 target_include_directories(
     simula_cache
     PRIVATE
         ./include/command_line
         ./include/cache_memory
-        ./include/read_file
+        ./include/reader_arquive
         ./include/tools
         ./include/default_structs
+        ./include/interfaces
+        ./include/substituition_policy
+        ./include/write_policy
 )

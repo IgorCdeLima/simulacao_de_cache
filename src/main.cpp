@@ -1,14 +1,13 @@
 #include "commandLine.h"
-#include "CacheMemoryConfiguration.h"
 #include "CacheMemory.h"
+#include "ReaderArquive.h"
 
 commandLine& lineOfCommandTratament = commandLine::getInstance();
-CacheMemoryConfiguration& config = CacheMemoryConfiguration::getInstance();
-CacheMemory memoryCache;
+CacheMemory& memoryCache = CacheMemory::getInstance();
 
 int main(int argc, char *argv[]){
     lineOfCommandTratament.argumentsForClass(argc, argv);
-    config.defineArgumetnsParamns(
+    memoryCache.initializeCacheMemory(
         lineOfCommandTratament.getEntryPolicy(),
         lineOfCommandTratament.getSizeLine(),
         lineOfCommandTratament.getNumberLines(),
@@ -17,7 +16,20 @@ int main(int argc, char *argv[]){
         lineOfCommandTratament.getSubstituitionPolicy(),
         lineOfCommandTratament.getTimeToReadWrite()
     );
-    config.printInformations();
-    memoryCache.interprectAddress("0020a858 R");
+
+    ReaderArquive reader;
+    
+
+    reader.defineNameArquive("./cache.cache");
+    reader.readArquive();
+
+    for(int i = 0; i < reader.SizeMemoriaSecundaria; i++)
+    {
+        memoryCache.Controller(reader.getMemSecundaria(i));
+    }
+
+    memoryCache.getStatistics();
+    memoryCache.saveDataOnMP();
+
     return 0;
 }

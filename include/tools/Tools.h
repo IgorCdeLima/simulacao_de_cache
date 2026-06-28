@@ -1,5 +1,5 @@
 #ifndef TOOLS_H
-#define TOOOLS_H
+#define TOOLS_H
 
     #include <vector>
     #include <string>
@@ -10,9 +10,6 @@
     #include "structs.h"
 
 
-    
-
-
     class Tools
     {
     private:
@@ -20,7 +17,7 @@
     public:
         Tools(/* args */);
         ~Tools();
-        std::vector<std::string> split(const std::string& texto);
+        LineInArquive split(const std::string& texto);
         uint32_t addressToLine(std::string data);
         std::string operationRorW(std::string charAccesType);
         void printInformation(std::string mensagem, std::string variable);
@@ -30,6 +27,8 @@
         uint32_t tagBitsInterpretation(uint32_t address, int offsetBits, int setBits);
         void imprimir(MemoryAccess data, int tag, int set, int offset);
         std::string toBinary(uint32_t value, int numberBits);
+        void cabecalho();
+        void printTable(simulationCache data);
     };
 
 

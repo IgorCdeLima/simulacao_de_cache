@@ -1,7 +1,6 @@
 #ifndef TOOLS_H
 #define TOOLS_H
 
-    #include <string>
     #include <iostream>
     #include <bitset>
     #include "structs.h"

@@ -58,7 +58,6 @@ bool commandLine::checkNoPowerOfTwo(int number, bool possibility_to_number_one){
 }
 
 // Essa função não deve estar aqui, deve ser criada uma classe melhor para ela
-
 void commandLine::error_message(std::string msg){
 
     throw std::runtime_error(msg);
@@ -113,7 +112,6 @@ std::string commandLine::getSubstituitionPolicy(){
 int commandLine::getTimeToReadWrite(){
     return accessTimePerHit;
 }
-
 
 commandLine::~commandLine()
 {

@@ -2,19 +2,19 @@
 #include "CacheMemory.h"
 #include "ReaderArquive.h"
 
-commandLine& lineOfCommandTratament = commandLine::getInstance();
+commandLine& lineCommand = commandLine::getInstance();
 CacheMemory& memoryCache = CacheMemory::getInstance();
 
 int main(int argc, char *argv[]){
-    lineOfCommandTratament.argumentsForClass(argc, argv);
+    lineCommand.argumentsForClass(argc, argv);
     memoryCache.initializeCacheMemory(
-        lineOfCommandTratament.getEntryPolicy(),
-        lineOfCommandTratament.getSizeLine(),
-        lineOfCommandTratament.getNumberLines(),
-        lineOfCommandTratament.getAssociability(),
-        lineOfCommandTratament.getAccessTimePerHit(),
-        lineOfCommandTratament.getSubstituitionPolicy(),
-        lineOfCommandTratament.getTimeToReadWrite()
+        lineCommand.getEntryPolicy(),
+        lineCommand.getSizeLine(),
+        lineCommand.getNumberLines(),
+        lineCommand.getAssociability(),
+        lineCommand.getAccessTimePerHit(),
+        lineCommand.getSubstituitionPolicy(),
+        lineCommand.getTimeToReadWrite()
     );
 
     ReaderArquive reader;
@@ -23,9 +23,9 @@ int main(int argc, char *argv[]){
     reader.defineNameArquive("./cache.cache");
     reader.readArquive();
 
-    for(int i = 0; i < reader.SizeMemoriaSecundaria; i++)
+    for(int line = 0; line < reader.SizeMemoriaSecundaria; line++)
     {
-        memoryCache.Controller(reader.getMemSecundaria(i));
+        memoryCache.Controller(reader.getMemSecundaria(line));
     }
 
     memoryCache.getStatistics();

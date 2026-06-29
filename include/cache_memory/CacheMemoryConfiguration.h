@@ -11,6 +11,7 @@
     #include "WriteThrough.h"
     #include "WriteBack.h"
     #include "IWritePolicy.h"
+    #include "Tools.h"
 
     
     #define SIZEADDRESS 32 //address to bits
@@ -19,6 +20,7 @@
     {
     private:
         
+        Tools tools;
 
 
         //class
@@ -65,7 +67,22 @@
         std::unique_ptr<IWritePolicy> writePolicy;
         
         
-        public:
+    public:
+
+        int cacheHit = 0;
+        int cacheMiss = 0;
+        
+        int memoryRead = 0;
+        int memoryWrite = 0;
+        
+        int readHit = 0;
+        int writeHit = 0;
+        
+        int writeOperation = 0;
+        int readOperation = 0;
+        
+        int globalLRU = 0;
+        
         // cacheMemory(/* args */);
         
         static CacheMemoryConfiguration& getInstance()
@@ -77,42 +94,23 @@
         
         // class funtions
         
-        void printInformations();
         void defineArgumetnsParamns( DataCM configurationStruct);
-        
-        int getEntryPolicy();
-        int getSizeLine();
-        int getNumberLines();
         int getAssociability();
-        int getAccessTimePerHit();
-        std::string getSubstituitionPolicy();
-        int getTimeToReadWrite();
         int getNumberOfSets();
-        int getOffSetBits();
-        int getSetBits();
-        int getTagBits();
-        int getTotalSizeToCacheMemory();
         int chooseLineToSubstitution(std::vector<LinhaCache>& line);
         void processWrite(LinhaCache& line);
         bool allocateOnWriteMiss();
         
-
-        //preparar uma struct futuramente
-        int cacheHit = 0;
-        int cacheMiss = 0;
-
-        int memoryRead = 0;
-        int memoryWrite = 0;
-
-        int readHit = 0;
-        int writeHit = 0;
-        
-        int writeOperation = 0;
-        int readOperation = 0;
-
-        int globalLRU = 0;
-
+        informationsProgram initialInformations();
         simulationCache getStatistics();
+
+        uint32_t getOffsetBitsInterpretation(uint32_t address);
+        uint32_t getSetBitsInterpretation(uint32_t address);
+        uint32_t getTagBitsInterpretation(uint32_t address);
+
+        void printInformation();
+        void printLine(std::string word, std::string variable);
+
     };
     
 

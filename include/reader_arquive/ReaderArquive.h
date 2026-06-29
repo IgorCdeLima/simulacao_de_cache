@@ -1,18 +1,17 @@
 #ifndef READERARQUIVE_H
 #define READERARQUIVE_H
 
-    #include <string>
     #include <fstream>
-    #include <vector>
     #include <iostream>
-    #include "Tools.h"
+    
+    #include "tratamentString.h"
     #include "structs.h"
 
 
     class ReaderArquive
     {
     private:
-        Tools tools;
+        TratamentString tools;
         std::fstream arquive;
         std::string nameArquive;
         std::vector<LineInArquive> MemSecundaria;

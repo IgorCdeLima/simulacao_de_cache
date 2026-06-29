@@ -61,6 +61,26 @@
         int totalOperation;
         int leiturasCache;
         int escritasCache;
+        int cacheSize;
+    };
+
+
+    struct informationsProgram
+    {
+        int politicaDeEscrita;
+        int tamanhoDoBloco;
+        int quantidadeDeblocos;
+        int associabilidade;
+        int tempoDeAcessoMedio;
+        std::string politicaDeSubstituicao;
+        int tempoDeEscritaLeitura;
+
+        int quantidadeDeConjuntos;
+        int bitsConjunto;
+        int bitsTag;
+        int bitsPalavra;
+        std::string tamanhoDaCacheString;
+
     };
 
 #endif //STRUCTS_H

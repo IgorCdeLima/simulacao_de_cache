@@ -1,0 +1,17 @@
+politica_escrita, tamanho_cache, tamanho_bloco, associatividade, leitura_mp, escrita_mp, total
+Write-through,8,64,2,3633,6144,9777
+Write-through,8,64,4,2611,6144,8755
+Write-through,8,128,2,4639,6144,10783
+Write-through,8,128,4,3106,6144,9250
+Write-through,16,64,2,56,6144,6200
+Write-through,16,64,4,56,6144,6200
+Write-through,16,128,2,1062,6144,7206
+Write-through,16,128,4,40,6144,6184
+Write-back,8,64,2,5170,0,5170
+Write-back,8,64,4,3126,0,3126
+Write-back,8,128,2,6176,0,6176
+Write-back,8,128,4,3621,0,3621
+Write-back,16,64,2,2615,0,2615
+Write-back,16,64,4,2615,0,2615
+Write-back,16,128,2,3621,0,3621
+Write-back,16,128,4,2599,0,2599

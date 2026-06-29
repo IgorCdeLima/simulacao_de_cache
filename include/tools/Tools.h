@@ -1,14 +1,13 @@
 #ifndef TOOLS_H
 #define TOOLS_H
 
-    #include <vector>
     #include <string>
-    #include <sstream>
     #include <iostream>
-    #include <iomanip>
     #include <bitset>
     #include "structs.h"
+    #include <iomanip>
 
+    #define REPET 100
 
     class Tools
     {
@@ -17,10 +16,8 @@
     public:
         Tools(/* args */);
         ~Tools();
-        LineInArquive split(const std::string& texto);
-        uint32_t addressToLine(std::string data);
-        std::string operationRorW(std::string charAccesType);
-        void printInformation(std::string mensagem, std::string variable);
+
+        void printLine(std::string mensagem, std::string variable);
         void printHexString(std::string mensagem, uint32_t variable);
         uint32_t offsetBitsInterpretation(uint32_t address, int offsetBits);
         uint32_t setBitsInterpretation(uint32_t address,int offsetBits, int setBits);
@@ -29,6 +26,7 @@
         std::string toBinary(uint32_t value, int numberBits);
         void cabecalho();
         void printTable(simulationCache data);
+        void printInformationsInitials(informationsProgram info);
     };
 
 

@@ -13,10 +13,25 @@
     <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\cache_memory\CacheMemory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\read_file\ReadFile.cpp">
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\reader_arquive\ReaderArquive.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\tools\Tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\tools\TratamentString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\substituition_policy\PolicyLRU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\substituition_policy\PolicyRandom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\write_policy\WriteBack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\06.GITHUB\simualcao_de_cache\simulacao_de_cache\src\write_policy\WriteThrough.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

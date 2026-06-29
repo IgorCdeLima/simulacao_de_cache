@@ -1,8 +1,6 @@
 #include "Tools.h"
 
-#define ADDRESS 0
-#define OPERATION 1
-#define CHARACTERTOOPREATION 0
+
 
 
 Tools::Tools(/* args */)
@@ -13,35 +11,15 @@ Tools::~Tools()
 {
 }
 
-LineInArquive Tools::split(const std::string& texto)
+std::string Tools::toBinary(uint32_t value, int numberBits)
 {
-    std::stringstream ss(texto);
-    std::string token;
-    std::vector<std::string> resultado;
-
-    while (ss >> token)
-    {
-        resultado.push_back(token);
-    }
-
-    LineInArquive AddressAndOperation;
-    AddressAndOperation.address = addressToLine(resultado[ADDRESS]);
-    AddressAndOperation.operation = resultado[OPERATION][CHARACTERTOOPREATION];
-
-    return AddressAndOperation ;
+    return std::bitset<32>(value)
+        .to_string()
+        .substr(32 - numberBits);
 }
 
-uint32_t Tools::addressToLine(std::string data)
-{
-    return static_cast<uint32_t>(std::stoul(data, nullptr, 16));
-}
 
-std::string Tools::operationRorW(std::string charAccesType)
-{
-    return std::string(charAccesType);
-}
-
-void Tools::printInformation(std::string mensagem, std::string variable)
+void Tools::printLine(std::string mensagem, std::string variable)
 {
     std::cout 
         << mensagem
@@ -118,39 +96,35 @@ void Tools::imprimir(MemoryAccess data,  int tagBits, int setBits, int offsetBit
 
 }
 
-std::string Tools::toBinary(uint32_t value, int numberBits)
-{
-    return std::bitset<32>(value)
-        .to_string()
-        .substr(32 - numberBits);
-}
 
 void Tools::printTable(simulationCache data)
 {
     std::cout
-    << "\n\tTABELA 1 - Parâmetros  da Simulação\n"
+    << "\n\tTABELA 1 - Parametros  da Simulacao\n"
     << "\n\tParâmetro \t\t\tValor"
     << "\n\tTamanho do bloco: \t\t" 
     << data.sizeBlock
     << " bytes"
-    << "\n\tPolítica de Escrita: \t\t"
+    << "\n\tPolitica de Escrita: \t\t"
     << data.writePolicy
-    << "\n\tAlgorítimo de Substituição: \t"
+    << "\n\tAlgoritimo de Substituicao: \t"
     << data.substituitionPolicy
     << "\n\tAssociatividade: \t\t"
     << data.associability
     << " blocos"
     << std::endl;
 
+    std::cout <<std::string(REPET, '-') << std::endl;
+
 
     std::cout
-    << "\n\tTABELA 2 - Resultado da Simulação"
-    << "\n\tNúmero de Blocos: \t\t"
+    << "\n\tTABELA 2 - Resultado da Simulacao\n"
+    << "\n\tNumero de Blocos: \t\t"
     << data.numberOfBlocks
     << "\n\tTaxa de Acerto: \t\t"
     << data.hitRate
     << "%"
-    << "\n\tTempo médio de Acesso (ns): \t"
+    << "\n\tTempo medio de Acesso (ns): \t"
     << data.averageAccessTime
     << "\n\tLeituras na MP: \t\t"
     << data.memoryRead
@@ -163,7 +137,7 @@ void Tools::printTable(simulationCache data)
     << std::endl;
 
     std::cout
-    << "\n-------------------------------------------------------------------------------------"
+    << std::string(REPET, '-')
     << "\n\tREAD OPERATION: "
     << data.readOperation
     << "\tWRITE OPERATION: "
@@ -172,5 +146,43 @@ void Tools::printTable(simulationCache data)
     << data.totalOperation
     << std::endl;
 
+}
+
+
+void Tools::printInformationsInitials(informationsProgram info)
+{
+
+    std::cout
+    << std::string(REPET, '-')
+    << "\n\n\t<entry_policy>:\t\t\t"
+    << info.politicaDeEscrita
+    <<  ((info.politicaDeEscrita == 1) ? "\t(Write-back)" : "\t(Write-through)")
+    << "\n\t<size_line>:\t\t\t"
+    << info.tamanhoDoBloco
+    << "\n\t<number_of_lines>:\t\t"
+    << info.quantidadeDeblocos
+    << "\n\t<associability>:\t\t"
+    << info.associabilidade
+    << "\n\t<access_time_per_hit>:\t\t"
+    << info.tempoDeAcessoMedio
+    << "\n\t<substituition_policy>:\t\t"
+    << info.politicaDeSubstituicao
+    << "\n\t<time_to_read_write>:\t\t"
+    << info.tempoDeEscritaLeitura
+    << "\n\n"
+    <<  std::string(REPET, '-')
+    << "\n\n\t[1] Number of Sets (quantidade de conjuntos):\t"
+    << info.quantidadeDeConjuntos
+    << "\n\t[2] Set offSet Bits (Bits da palavra):\t\t"
+    << info.bitsPalavra
+    << "\n\t[3] Set bits (bits do conjunto):\t\t"
+    << info.bitsConjunto
+    << "\n\t[4] Tag bits (Bits da Tag):\t\t\t"
+    << info.bitsTag
+    << "\n\t[5] Total Size to Cache Memory:\t\t\t"
+    << info.tamanhoDaCacheString
+    << "\n\n"
+    << std::string(REPET, '-')
+    << std::endl;
 
 }

@@ -1,16 +1,12 @@
 #ifndef CACHEMEMORY_H
 #define CACHEMEMORY_H
 
-    #include "Tools.h"
     #include "CacheMemoryConfiguration.h"
-
 
 
     class CacheMemory
     {
     private:
-
-   
 
 
         Tools tools;

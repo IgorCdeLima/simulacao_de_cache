@@ -15,22 +15,11 @@ MemoryAccess CacheMemory::interprectAddress(LineInArquive lineToInterpret)
     MemoryAccess newData;
     
 
-    newData.address.offset = tools.offsetBitsInterpretation(
-        lineToInterpret.address,
-        config.getOffSetBits()
-    );
+    newData.address.offset = config.getOffsetBitsInterpretation(lineToInterpret.address);
 
-    newData.address.set = tools.setBitsInterpretation(
-        lineToInterpret.address,
-        config.getOffSetBits(),
-        config.getSetBits()
-    );
+    newData.address.set = config.getSetBitsInterpretation(lineToInterpret.address);
 
-    newData.address.tag = tools.tagBitsInterpretation(
-        lineToInterpret.address,
-        config.getOffSetBits(),
-        config.getSetBits()
-    );
+    newData.address.tag = config.getTagBitsInterpretation(lineToInterpret.address);
 
     newData.operation = lineToInterpret.operation;
 
@@ -58,8 +47,7 @@ void CacheMemory::initializeCacheMemory(
     configurationStruct.timeToReadWrite = timeToReadWrite;
     config.defineArgumetnsParamns(configurationStruct);
 
-    config.printInformations();
-
+    
     cacheMemory = std::vector<std::vector<LinhaCache>>
     (
         config.getNumberOfSets(),
@@ -158,9 +146,8 @@ void CacheMemory::Controller(LineInArquive lineToInterpret)
 
 void CacheMemory::saveDataOnMP()
 {   
-    tools.printInformation("-------------------------------------------------------------------------------------", "\nFINALIZANDO OPERAÇÔES");
-    tools.printInformation("-------------------------------------------------------------------------------------", "");
-    tools.printInformation("\tSALVANDO DADOS DA CACHE NA MP: ", "AGUARDE");
+    config.printLine(std::string(REPET, '-'), "\n\tFINALIZANDO OPERACOES");
+    config.printLine("\tSALVANDO DADOS DA CACHE NA MP: ", "AGUARDE");
     int set = 0;
     int tag = 0;
     if(config.allocateOnWriteMiss())
@@ -177,7 +164,8 @@ void CacheMemory::saveDataOnMP()
             }
         }
     }
-    tools.printInformation("\tDADOS SALVOS: ", std::to_string(config.memoryWrite));
+    config.printLine("\n\tDADOS SALVOS: ", std::to_string(config.memoryWrite));
+    config.printLine( std::string(REPET, '-'),"\n");
 }
 
 LinhaCache CacheMemory::createLinhaCache(int tag, char operation)
@@ -196,5 +184,5 @@ void CacheMemory::updateLRU(LinhaCache& line)
 
 void CacheMemory::getStatistics()
 {
-    tools.printTable(config.getStatistics());
+    config.printInformation();
 }

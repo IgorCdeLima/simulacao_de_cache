@@ -12,6 +12,7 @@ add_executable(
     ./src/cache_memory/CacheMemory.cpp
     ./src/reader_arquive/ReaderArquive.cpp
     ./src/tools/Tools.cpp
+    ./src/tools/TratamentString.cpp
     ./src/substituition_policy/PolicyLRU.cpp
     ./src/substituition_policy/PolicyRandom.cpp
     ./src/write_policy/WriteBack.cpp

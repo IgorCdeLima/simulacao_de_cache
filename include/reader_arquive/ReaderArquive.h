@@ -4,7 +4,7 @@
     #include <fstream>
     #include <iostream>
     
-    #include "tratamentString.h"
+    #include "TratamentString.h"
     #include "structs.h"
 
 

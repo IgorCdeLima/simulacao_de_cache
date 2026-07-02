@@ -29,6 +29,22 @@ obs: pode ser necessário autorizar a execução do aplicativo para linux ou Mac
 <img width="838" height="614" alt="WhatsApp Image 2026-07-02 at 15 50 57" src="https://github.com/user-attachments/assets/cf85adde-ef86-4e52-b1b3-b2ec7d70d64e" />
 
 
+4. Informações para a execução 
+
+
+*comando*
+´simula_cache 0 64 4096 2  4 LRU 60´
+
+São necessário 7 informações para o aplicativo ser executado, sendo elas:
+
+Política de escrita: 0 - write-through e 1 - write-back;
+Tamanho da linha: deve ser potência de 2, em bytes;
+Número de linhas: deve ser potência de 2;
+Associatividade (número de linhas) por conjunto: deve ser potência de 2 (mínimo 1 e máximo igual ao número de linhas);
+Tempo de acesso quando encontra (hit time): em nanossegundos;
+Política de Substituição: LRU (Least Recently Used) ou Aleatória;
+Tempos de leitura/escrita: em nanossegundos.
+
 
 
 

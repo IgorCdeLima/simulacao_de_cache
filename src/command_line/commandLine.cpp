@@ -110,7 +110,7 @@ std::string commandLine::getSubstituitionPolicy(){
     return substituitionPolicy;
 }
 int commandLine::getTimeToReadWrite(){
-    return accessTimePerHit;
+    return timeToReadWrite;
 }
 
 commandLine::~commandLine()

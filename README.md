@@ -38,11 +38,17 @@ obs: pode ser necessário autorizar a execução do aplicativo para linux ou Mac
 São necessário 7 informações para o aplicativo ser executado, sendo elas:
 
 Política de escrita: 0 - write-through e 1 - write-back;
+
 Tamanho da linha: deve ser potência de 2, em bytes;
+
 Número de linhas: deve ser potência de 2;
+
 Associatividade (número de linhas) por conjunto: deve ser potência de 2 (mínimo 1 e máximo igual ao número de linhas);
+
 Tempo de acesso quando encontra (hit time): em nanossegundos;
+
 Política de Substituição: LRU (Least Recently Used) ou Aleatória;
+
 Tempos de leitura/escrita: em nanossegundos.
 
 

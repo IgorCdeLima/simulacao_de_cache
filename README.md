@@ -22,6 +22,15 @@ cmake --build  build
 3. O Arquivo compilado pode ser encontrado em:
     
     *windows*: .\simula_cache.exe
-    *linux:*: .\simula_cache
+   
+    *linux:*: ./simula_cache
+
+obs: pode ser necessário autorizar a execução do aplicativo para linux ou MacOs
+<img width="838" height="614" alt="WhatsApp Image 2026-07-02 at 15 50 57" src="https://github.com/user-attachments/assets/cf85adde-ef86-4e52-b1b3-b2ec7d70d64e" />
+
+
+
+
+
 
 

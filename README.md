@@ -19,8 +19,9 @@ cmake -B build
 `
 cmake --build  build
 `
-3. O Arquivo compilado pode ser encontrado em: 
-    *windows*: .\build\Debug\simula_cache.exe
-    *linux:*: .\build\simula_cache
+3. O Arquivo compilado pode ser encontrado em:
+    
+    *windows*: .\simula_cache.exe
+    *linux:*: .\simula_cache
 
 
